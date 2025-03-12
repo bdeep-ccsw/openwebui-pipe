@@ -20,7 +20,7 @@ class Pipeline:
 
     async def on_startup(self):
         # Initialize ChromaDB
-        self.client = chromadb.PersistentClient(path="./chroma_db")
+        self.client = chromadb.PersistentClient(path="/chroma_db")
         self.collection = self.client.get_or_create_collection(name="documents")
 
     async def on_shutdown(self):
