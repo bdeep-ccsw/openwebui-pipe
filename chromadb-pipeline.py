@@ -46,5 +46,6 @@ class Pipeline:
         response_text = "Relevant Info: \n" + "\n\n".join(retrieved_docs)
         response_text += f"[{retrieved_docs}]\n"
         response_text += f"COUNT:[{count}]\n"
+        response_text += f"[{collection.get()}]"
 
         return response_text
