@@ -46,5 +46,7 @@ class Pipeline:
             response_text + "NO CLIENT\n"
         if not self.collection:
             response_text += "NO COLLECTION\n"
+        if retrieved_docs == "":
+            response_text += "NO DOCS\n"
 
         return response_text
