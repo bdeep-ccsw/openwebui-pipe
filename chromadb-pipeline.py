@@ -42,5 +42,9 @@ class Pipeline:
         # Combine results into a response
         retrieved_docs = [doc for doc in results["documents"][0]]
         response_text = "Relevant Info: \n" + "\n\n".join(retrieved_docs)
+        if not self.client:
+            response_text + "NO CLIENT\n"
+        if not self.collection:
+            respeonse_text += "NO COLLECTION\n"
 
         return response_text
