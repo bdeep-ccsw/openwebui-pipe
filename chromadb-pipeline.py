@@ -47,6 +47,7 @@ class Pipeline:
         #response_text += f"[{retrieved_docs}]\n"
         response_text = f"COUNT:[{count}]\n"
         documents = collection.get()
-        response_text += f"COLLECTION:[documents["metadatas"]}]"
+        if documents["metadatas"] is not None:
+            response_text += f"COLLECTION:[documents["metadatas"]}]"
 
         return response_text
