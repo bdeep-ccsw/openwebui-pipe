@@ -40,10 +40,11 @@ class Pipeline:
 
         # Combine results into a response
         count = self.collection.count()
-        retrieved_docs = [doc for doc in results["documents"][0]]
+        #retrieved_docs = [doc for doc in results["documents"][0]]
         #response_text = "Relevant Info: \n" + "\n\n".join(retrieved_docs)
         #response_text += f"[{retrieved_docs}]\n"
         #response_text += f"DOCS:[{retrieved_docs}]\n"
-        response_text = f"COUNT:[{count}]\nDOCS:[{retrieved_docs}]\n"
+        response_text = f"COUNT:[{count}]\n"
+        #DOCS:[{retrieved_docs}]\n"
 
         return response_text
