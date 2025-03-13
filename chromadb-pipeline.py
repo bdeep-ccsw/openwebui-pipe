@@ -45,6 +45,6 @@ class Pipeline:
         if not self.client:
             response_text + "NO CLIENT\n"
         if not self.collection:
-            respeonse_text += "NO COLLECTION\n"
+            response_text += "NO COLLECTION\n"
 
         return response_text
